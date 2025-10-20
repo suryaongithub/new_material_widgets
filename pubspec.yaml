@@ -1,7 +1,9 @@
 name: new_material_widgets
 description: "A Flutter project dedicated to creating awesome custom widgets for instant use."
 version: 0.0.1
-homepage:
+homepage: https:github.com\suryaongithub\new_material_widgets
+repository: https:github.com\suryaongithub\new_material_widgets
+issue_tracker: https;:github.com\suryaongithub\new_material_widgets\issues
 
 environment:
   sdk: ^3.9.2
