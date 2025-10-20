@@ -3,7 +3,7 @@ description: "A Flutter project dedicated to creating awesome custom widgets for
 version: 0.0.1
 homepage: https:github.com\suryaongithub\new_material_widgets
 repository: https:github.com\suryaongithub\new_material_widgets
-issue_tracker: https;:github.com\suryaongithub\new_material_widgets\issues
+issue_tracker: https:github.com\suryaongithub\new_material_widgets\issues
 
 environment:
   sdk: ^3.9.2
@@ -24,6 +24,7 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+  uses-material-design: true
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
