@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:new_material_widgets/GlossyCeramic/GCColorSchema.dart';
 
 
-/*
-* Widget for TextField of the GlossyCeramic type.
-* Takes in colorScheme, which is a GCColorSchema class, see [GCColorSchema]
-* There IS a obscurity toggle for passwords.
-* A prefix icon for the start of the screen
-* Keyboard Input type, The keyboard that pops up from the bottom-
-* -text keyboard by default
-*
-* */
+
+/// Widget for TextField of the GlossyCeramic type.
+/// Takes in colorScheme, which is a GCColorSchema class, see [GCColorSchema]
+/// There IS a obscurity toggle for passwords.
+/// A prefix icon for the start of the screen
+/// Keyboard Input type, The keyboard that pops up from the bottom-
+/// -text keyboard by default
+
 class GCTextField extends StatefulWidget {
   final GCColorSchema colorScheme;
   final TextEditingController textEditingController;
