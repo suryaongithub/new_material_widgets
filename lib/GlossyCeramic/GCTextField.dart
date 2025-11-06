@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_material_widgets/GlossyCeramic/GCColorSchema.dart';
 
-
-
 /// Widget for TextField of the GlossyCeramic type.
 /// Takes in colorScheme, which is a GCColorSchema class, see [GCColorSchema]
 /// There IS a obscurity toggle for passwords.

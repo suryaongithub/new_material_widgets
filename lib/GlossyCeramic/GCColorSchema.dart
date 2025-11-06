@@ -32,9 +32,13 @@ class GCColorSchema {
   // Icons which are aloof and not main(Auxiliary)
   final Color auxIconColor;
 
+  // The tint color for the Glossy foreground elements
+  final Color tintColor;
+
   // Default colors, can be left but you SHOULD customize them yourself
 
   GCColorSchema({
+    this.tintColor = const Color.fromARGB(115, 148, 162, 223),
     this.auxIconColor = const Color.fromARGB(255, 189, 189, 189),
     this.textColor = const Color.fromARGB(255, 115, 115, 115),
     this.backgroundColor = const Color.fromARGB(239, 226, 243, 253),
