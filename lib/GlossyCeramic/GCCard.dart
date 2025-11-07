@@ -14,6 +14,7 @@ class GCCard extends StatelessWidget {
   // The child widget inside the button (Text, Icon, etc.).
   final Widget child;
 
+  // All functions are nullable, so that they can be left empty if not needed.
   // Function to be executed when button is pressed once.
   final VoidCallback? functionPressed;
 
@@ -22,9 +23,6 @@ class GCCard extends StatelessWidget {
 
   // Function to be executed when button is held.
   final VoidCallback? functionHeld;
-
-  // disables click functionality of the card.
-  final bool? disabled;
 
   // The color scheme — defines colors for the button’s visual layers.
   final GCColorSchema colorScheme;
@@ -43,18 +41,32 @@ class GCCard extends StatelessWidget {
     required this.colorScheme,
     required this.height,
     required this.width,
-    this.disabled = false,
     this.elevation = 1,
     this.curveRadii = 10,
     required this.child,
   });
 
+  // Check if the Card has interactions.
+
   @override
   Widget build(BuildContext context) {
-    return Material(
-      surfaceTintColor: colorScheme.tintColor,
-      elevation: elevation,
-      child: Placeholder(child: SizedBox(height: 250, width: 250)),
+    final bool hasInteractions =
+        functionPressed != null ||
+        functionDoublePressed != null ||
+        functionHeld != null;
+    return InkWell(
+      onTap: functionPressed ?? () {},
+      onDoubleTap: functionDoublePressed ?? () {},
+      onLongPress: functionHeld ?? () {},
+      splashColor: hasInteractions ? colorScheme.rippleColor : null,
+      child: Material(
+        borderRadius: BorderRadius.circular(curveRadii),
+        color: colorScheme.cardColor,
+        shadowColor: colorScheme.shadowColor,
+        surfaceTintColor: colorScheme.tintColor,
+        elevation: elevation,
+        child: SizedBox(width: width, height: height, child: child),
+      ),
     );
   }
 }

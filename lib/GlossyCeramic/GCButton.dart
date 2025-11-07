@@ -61,7 +61,7 @@ class _GCButtonState extends State<GCButton> {
       elevation: elevation,
       color: widget.disabled == true
           ? widget.colorScheme.inactiveColor
-          : widget.colorScheme.cardColor,
+          : widget.colorScheme.buttonColor,
       shadowColor: widget.colorScheme.shadowColor,
       borderRadius: BorderRadius.circular(widget.curveRadii),
 

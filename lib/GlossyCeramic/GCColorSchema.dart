@@ -35,9 +35,13 @@ class GCColorSchema {
   // The tint color for the Glossy foreground elements
   final Color tintColor;
 
+  // The color for the Button widgets
+  final Color buttonColor;
+
   // Default colors, can be left but you SHOULD customize them yourself
 
   GCColorSchema({
+    this.buttonColor = const Color.fromARGB(255, 151, 157, 241),
     this.tintColor = const Color.fromARGB(115, 148, 162, 223),
     this.auxIconColor = const Color.fromARGB(255, 189, 189, 189),
     this.textColor = const Color.fromARGB(255, 115, 115, 115),
