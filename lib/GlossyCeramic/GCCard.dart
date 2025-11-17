@@ -55,6 +55,7 @@ class GCCard extends StatelessWidget {
         functionDoublePressed != null ||
         functionHeld != null;
     return InkWell(
+      clipBehavior: Clip.antiAlias,
       onTap: functionPressed ?? () {},
       onDoubleTap: functionDoublePressed ?? () {},
       onLongPress: functionHeld ?? () {},
