@@ -24,7 +24,7 @@ class GCCard extends StatelessWidget {
   // Function to be executed when button is held.
   final VoidCallback? functionHeld;
 
-  // The color scheme — defines colors for the button’s visual layers.
+  // The color scheme — defines colors for the button's visual layers.
   final GCColorSchema colorScheme;
 
   // Elevation (shadow depth).
@@ -46,27 +46,32 @@ class GCCard extends StatelessWidget {
     required this.child,
   });
 
-  // Check if the Card has interactions.
-
   @override
   Widget build(BuildContext context) {
     final bool hasInteractions =
         functionPressed != null ||
         functionDoublePressed != null ||
         functionHeld != null;
-    return InkWell(
+    
+    return Material(
       clipBehavior: Clip.antiAlias,
-      onTap: functionPressed ?? () {},
-      onDoubleTap: functionDoublePressed ?? () {},
-      onLongPress: functionHeld ?? () {},
-      splashColor: hasInteractions ? colorScheme.rippleColor : null,
-      child: Material(
-        borderRadius: BorderRadius.circular(curveRadii),
-        color: colorScheme.cardColor,
-        shadowColor: colorScheme.shadowColor,
-        surfaceTintColor: colorScheme.tintColor,
-        elevation: elevation,
-        child: SizedBox(width: width, height: height, child: child),
+      child: SizedBox(
+        width: width,
+        height: height,
+        child: InkWell(
+          onTap: functionPressed ?? () {},
+          onDoubleTap: functionDoublePressed ?? () {},
+          onLongPress: functionHeld ?? () {},
+          splashColor: hasInteractions ? colorScheme.rippleColor : null,
+          child: Material(
+            borderRadius: BorderRadius.circular(curveRadii),
+            color: colorScheme.cardColor,
+            shadowColor: colorScheme.shadowColor,
+            surfaceTintColor: colorScheme.tintColor,
+            elevation: elevation,
+            child: child,
+          ),
+        ),
       ),
     );
   }
