@@ -48,6 +48,7 @@ class _GCTextFieldState extends State<GCTextField> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return TextField(
