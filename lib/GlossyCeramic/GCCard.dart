@@ -33,6 +33,9 @@ class GCCard extends StatelessWidget {
   // Corner curvature — higher values produce more rounded corners.
   final double curveRadii;
 
+  // EdgeInsets
+  final EdgeInsets padding;
+
   const GCCard({
     this.functionPressed,
     this.functionDoublePressed,
@@ -41,6 +44,7 @@ class GCCard extends StatelessWidget {
     required this.colorScheme,
     required this.height,
     required this.width,
+    this.padding = const EdgeInsets.all(8.0),
     this.elevation = 1,
     this.curveRadii = 10,
     required this.child,
@@ -69,7 +73,7 @@ class GCCard extends StatelessWidget {
             shadowColor: colorScheme.shadowColor,
             surfaceTintColor: colorScheme.tintColor,
             elevation: elevation,
-            child: child,
+            child: Padding(padding:padding,child:child),
           ),
         ),
       ),
