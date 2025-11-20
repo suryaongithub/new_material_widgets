@@ -58,6 +58,7 @@ class GCCard extends StatelessWidget {
         functionHeld != null;
     
     return Material(
+borderRadius:BorderRadius.circular(curveRadii),
       clipBehavior: Clip.antiAlias,
       child: SizedBox(
         width: width,
